@@ -1,5 +1,6 @@
+<center>
 ![alt text](https://github.com/lassikin/LaJSON/raw/master/lajsonlogo.png "LaJSON logo")
-
+</center>
 
 # LaJSON - Light Alternative JSON Library for Java
 
