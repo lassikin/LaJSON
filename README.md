@@ -4,7 +4,7 @@ Light Alternative JSON Library for Java - LaJSON
 
 LaJSON aims to provide an alternative library
 
-design goals:
+design goals:\n
 *at least as fast or faster than json.org
 *definitive mapping to json and back
 *intuitively know what the output and input will be
