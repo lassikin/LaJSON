@@ -8,7 +8,7 @@
 <center>
 LaJSON aims to provide an alternative library to json.org, with direct and unambigious mapping to json input or output.
 </center>
-## Design goals:
+<h2>Design goals</2>
 <p>list item</p>
 <p>list item</p>
 <p>list item</p>
