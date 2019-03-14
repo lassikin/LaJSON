@@ -1,3 +1,6 @@
+![alt text](https://github.com/lassikin/LaJSON/raw/master/lajsonlogo.png "LaJSON logo")
+
+
 # LaJSON - Light Alternative JSON Library for Java
 
 LaJSON aims to provide an alternative library to json.org, with direct and unambigious mapping to json input or output.
