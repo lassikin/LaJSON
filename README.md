@@ -21,3 +21,6 @@ LaJSON aims to provide an alternative library to json.org, with direct and unamb
 
 
 # Installation / Requirements of the runtime system
+
+Add the .jar library into your project.
+Maven and Gradle packages coming in the future
