@@ -1,6 +1,6 @@
 
 <p align="center">
-  <img width="600" height="131" src="https://github.com/lassikin/LaJSON/raw/master/lajsonlogo.png">
+  <img width="600" height="131" src="https://github.com/lassikin/LaJSON/raw/master/jsonlogo2.png">
 </p>
 
 
