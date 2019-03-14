@@ -1,4 +1,8 @@
 
+<p align="center">
+  <img width="600" height="131" src="https://github.com/lassikin/LaJSON/raw/master/lajsonlogo.png">
+</p>
+
 ![alt text](https://github.com/lassikin/LaJSON/raw/master/lajsonlogo.png "LaJSON logo")
 
 # LaJSON - Light Alternative JSON Library for Java
