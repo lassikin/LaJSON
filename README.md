@@ -14,6 +14,7 @@ LaJSON aims to provide an alternative library to json.org, with direct and unamb
 <p>-Usable in most Java environments</p>
 <p>-Unambigious serialization to JSON and back into LaJSON objects</p>
 <p>-No additional dependencies to other libraries</p>
+<p>-Obfuscation friendly</p>
 <p>-<bold>Practicality</bold></p>
 
 # Usage
