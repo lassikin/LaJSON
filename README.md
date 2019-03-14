@@ -1,8 +1,6 @@
-# LaJSON
-Light Alternative JSON Library for Java - LaJSON
+# LaJSON - Light Alternative JSON Library for Java
 
-
-#LaJSON aims to provide an alternative library
+LaJSON aims to provide an alternative library to json.org, with direct and unambigious mapping to json input or output.
 
 design goals:
 <ul>
