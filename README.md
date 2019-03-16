@@ -17,6 +17,8 @@ LaJSON aims to provide an alternative library to parse JSON formatted data, with
 <p>-Obfuscation friendly</p>
 <p>-<bold>Practicality</bold></p>
 
+<a href=https://github.com/lassikin/LaJSON/blob/master/FAQ.md> FAQ </a>
+
 # Usage
 
 
