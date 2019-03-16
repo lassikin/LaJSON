@@ -8,7 +8,7 @@
 <center>
 LaJSON aims to provide an alternative library to parse JSON formatted data, with direct and unambigious mapping to JSON input or output.
 </center>
-<h3>Design goals</h3>
+<h3>Project goals</h3>
 <p>-At least as fast or faster than JSON.org</p>
 <p>-Small (an under 20 kbyte addition)</p>
 <p>-Usable in most Java environments</p>
