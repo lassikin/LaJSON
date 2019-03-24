@@ -1,4 +1,4 @@
-
+<h1>Basic usage</h1>
 
 Parse a json string into a LaJSON object:<br>
 LaJSON lajson = new LaJSON(testInput);<br>
