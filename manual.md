@@ -1,18 +1,18 @@
 
 
 Parse a json string into a LaJSON object:<br>
-LaJSON lajson = new LaJSON(testInput);
-
-Put in a basic value:
-  lajson.putString("this is name","this is value");
-
-Parse LaJSON into a json string:
-  String output = lajson.toString();
-
-Create an array and put it in:
-  LaJSON jsonArray= LaJSON.newArray();
-  jsonArray.addNumber(3234.323);
-  lajson.putLaJSON("array", jsonArray);
-  
+LaJSON lajson = new LaJSON(testInput);<br>
+<br><br>
+Put in a basic value:<br>
+  lajson.putString("this is name","this is value");<br>
+<br><br>
+Parse LaJSON into a json string:<br>
+  String output = lajson.toString();<br>
+<br><br>
+Create an array and put it in:<br>
+  LaJSON jsonArray= LaJSON.newArray();<br>
+  jsonArray.addNumber(3234.323);<br>
+  lajson.putLaJSON("array", jsonArray);<br>
+  <br><br>
 **take special care to not create a circular loop.
 
