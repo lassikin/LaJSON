@@ -14,7 +14,7 @@ LaJSON aims to provide an alternative library to parse JSON formatted data, with
 <p>-Usable in most Java environments</p>
 <p>-Unambigious serialization to JSON and back into LaJSON objects. (input for numbers should match output, even for cases where it will not be so for json.org.</p>
 <p>-No additional dependencies to other libraries</p>
-<p>-Obfuscation friendly</p>
+<p>-Obfuscation friendly (no need to configure proguard etc) </p>
 <p>-<bold>Practicality</bold></p>
 
 <a href=https://github.com/lassikin/LaJSON/blob/master/FAQ.md> FAQ </a>
