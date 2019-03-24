@@ -16,9 +16,9 @@ Create an array and put it in:<br>
   <br><br>
 
 <br>
-When working with an LaJSON array, use the methods prefixed with "add" to add in array elements. With regular LaJSON name-value pairs use put-prefixed methods.
+<p>When working with an LaJSON array, use the methods prefixed with "add" to add in array elements. With regular LaJSON name-value pairs use put-prefixed methods.</p>
 <br>
-
+<br>
 
 
 
