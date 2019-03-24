@@ -22,5 +22,5 @@ Create an array and put it in:<br>
 
 
 
-  <b>take special care to not create a circular loop with the json objects, use .clone() to create a clone if you need a copy in the same hieararchy. At the moment clone serializes and parses it again and has no references to the original LaJSON object anymore.</b> You can safely have the same LaJSON at different places of your hierarchy however as there is no circular reference loops.
+  <b>take special care to not create a circular loop with the json objects, use .clone() to create a clone if you need a copy(clone) that doesn't reference the original objects contents. At the moment clone serializes and parses it again and has no references to the original LaJSON object anymore.</b> You can safely have the same LaJSON at different places of your hierarchy however as there is no circular reference loops.
 
