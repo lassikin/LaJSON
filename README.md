@@ -21,6 +21,9 @@ LaJSON aims to provide an alternative library to parse JSON formatted data, with
 
 # Usage
 
+see <a href=https://github.com/lassikin/LaJSON/blob/master/manual.md> manual. </a>
+
+
 
 
 # Installation / Requirements of the runtime system
