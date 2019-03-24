@@ -1,6 +1,6 @@
 
 
-Parse a json string into a LaJSON object:
+Parse a json string into a LaJSON object:<br>
 LaJSON lajson = new LaJSON(testInput);
 
 Put in a basic value:
