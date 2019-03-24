@@ -14,5 +14,5 @@ Create an array and put it in:<br>
   jsonArray.addNumber(3234.323);<br>
   lajson.putLaJSON("array", jsonArray);<br>
   <br><br>
-  <b>take special care to not create a circular loop.</b>
+  <b>take special care to not create a circular loop with the json objects, use .clone() to create a clone if you need a copy in the same hieararchy.</b>
 
