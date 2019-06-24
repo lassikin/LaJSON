@@ -32,5 +32,6 @@ With larger inputs, faster than either json or gson.
 
 Add the .jar library into your project. Alternatively you can simply just add the .java into your project(it's a single file, which is part of the project goals, 1 java file - WITH NO EXTRA DEPENDENCIES)
 
+So just drop https://github.com/lassikin/LaJSON/blob/master/sources/LaJSONLibrary/src/lassik/LaJSON/LaJSON.java this file into your project and you're good to go.
 
 Maven and Gradle packages coming in the future
