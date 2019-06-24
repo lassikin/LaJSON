@@ -6,7 +6,8 @@
 
 # LaJSON - Light Alternative JSON Library for Java
 <center>
-LaJSON aims to provide an alternative library to parse and create JSON formatted data, with direct and unambigious mapping to JSON input or output.
+LaJSON aims to provide an alternative library to parse and create JSON formatted data, with direct and unambigious mapping to JSON input or output. 
+<a href=https://github.com/lassikin/LaJSON/blob/master/FAQ.md> Please see the FAQ before using, it takes just a moment to skim over it, please. </a>
 </center>
 <h3>Project goals</h3>
 <p>-At least as fast or faster than JSON.org, At least as fast or faster as GSON JSONParser, focused on bigger input and outputs</p>
