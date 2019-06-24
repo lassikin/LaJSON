@@ -35,3 +35,5 @@ Add the .jar library into your project. Alternatively you can simply just add th
 So just drop https://github.com/lassikin/LaJSON/blob/master/sources/LaJSONLibrary/src/lassik/LaJSON/LaJSON.java this file into your project and you're good to go.
 
 Maven and Gradle packages coming in the future
+
+*note: renamed from LaJSON to LassiJSON as there is a python library named LaJSON already and every other single two letters+JSON name seems taken already as well
