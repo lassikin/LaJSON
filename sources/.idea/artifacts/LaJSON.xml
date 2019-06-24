@@ -1,0 +1,11 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="LaJSON">
+    <output-path>$PROJECT_DIR$/out/artifacts/LaJSON</output-path>
+    <root id="archive" name="LaJSON.jar">
+      <element id="module-output" name="LaJSONLibrary" />
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/LaJSONLibrary/META-INF/MANIFEST.MF" />
+      </element>
+    </root>
+  </artifact>
+</component>

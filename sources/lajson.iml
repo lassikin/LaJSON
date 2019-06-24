@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="FacetManager">
+    <facet type="IntelliGuard" name="Obfuscation">
+      <configuration>
+        <option name="yGuardJar" value="D:\yguard\yguard-2.7.1\lib\yguard.jar" />
+        <option name="inFile" value="d:\ljnonobf.jar" />
+        <option name="outFile" value="d:\obfusc.jar" />
+        <option name="mainclass" value="lassi.kinnunen.Main" />
+        <option name="jarConfig">
+          <JarConfig>
+            <option name="jarEntries">
+              <list>
+                <option value="C:\Users\lk\IdeaProjects\lajson\out\production\lajson" />
+              </list>
+            </option>
+            <option name="linkLibraries" value="/" />
+          </JarConfig>
+        </option>
+      </configuration>
+    </facet>
+  </component>
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" exported="" name="json-20180813" level="project" />
+    <orderEntry type="module" module-name="LaJSONLibrary" exported="" />
+    <orderEntry type="library" exported="" name="gson-2.8.2" level="project" />
+  </component>
+</module>
