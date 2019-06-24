@@ -4,7 +4,7 @@
 </p>
 
 
-# LaJSON - Light Alternative JSON Library for Java
+# LassiJSON - Light Alternative JSON Library for Java
 <center>
 LaJSON aims to provide an alternative library to parse and create JSON formatted data, with direct and unambigious mapping to JSON input or output. 
 <a href=https://github.com/lassikin/LaJSON/blob/master/FAQ.md> Please see the FAQ before using, it takes just a moment to skim over it, please. </a>
