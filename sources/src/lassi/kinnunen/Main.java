@@ -5,7 +5,7 @@ import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonParser;
 import lassi.kinnunen.utilities.Lal;
-import lassik.LaJSON.LaJSON;
+import lassik.LassiJSON.LassiJSON;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -19,7 +19,7 @@ import static java.lang.System.exit;
 public class Main {
 
 
-    public static void printKeys(LaJSON la, String prefix) {
+    public static void printKeys(LassiJSON la, String prefix) {
         if (la.isArray()) {
             for (int n = 0; n < la.arraySize(); n++) {
                 Lal.l(prefix + la.getValue(n).toString());
@@ -31,7 +31,7 @@ public class Main {
             for (String key : la.values.keySet()) {
 
 
-                if (la.getValue(key).type == LaJSON.LaJSONDataType.JSONOBJECT || la.getValue(key).type == LaJSON.LaJSONDataType.ARRAY) {
+                if (la.getValue(key).type == LassiJSON.LaJSONDataType.JSONOBJECT || la.getValue(key).type == LassiJSON.LaJSONDataType.ARRAY) {
                     Lal.l(prefix + "" + key + ":");
                     printKeys(la.getValue(key).getLaJSON(), prefix + "--*");
                 } else {
@@ -43,20 +43,20 @@ public class Main {
 
     }
 
-    public static int countkeys(LaJSON la) {
+    public static int countkeys(LassiJSON la) {
         int count = 0;
 
         if (la.isArray()) {
             for (int n = 0; n < la.arraySize(); n++) {
-                LaJSON.Value value = la.getValue(n);
-                if (value.type == LaJSON.LaJSONDataType.ARRAY || value.type == LaJSON.LaJSONDataType.JSONOBJECT) {
+                LassiJSON.Value value = la.getValue(n);
+                if (value.type == LassiJSON.LaJSONDataType.ARRAY || value.type == LassiJSON.LaJSONDataType.JSONOBJECT) {
                     count += countkeys(value.getLaJSON());
                 }
                 count++;
             }
         } else
             for (String key : la.values.keySet()) {
-                if (la.getValue(key).type == LaJSON.LaJSONDataType.JSONOBJECT || la.getValue(key).type == LaJSON.LaJSONDataType.ARRAY) {
+                if (la.getValue(key).type == LassiJSON.LaJSONDataType.JSONOBJECT || la.getValue(key).type == LassiJSON.LaJSONDataType.ARRAY) {
                     count += countkeys(la.getValue(key).getLaJSON());//    printKeys(la.getValue(key).getLaJSON(), prefix + "--*");
                 }
                 count++;
@@ -178,7 +178,7 @@ public class Main {
 
             long start = System.nanoTime();
             //Lal.l("lajs parsing commencing");
-            LaJSON lajs = new LaJSON(jsonarrayThing, true);
+            LassiJSON lajs = new LassiJSON(jsonarrayThing, true);
 
 
             laJsonNoThreadingParseTime += (System.nanoTime() - start);
@@ -220,7 +220,7 @@ public class Main {
 
              start = System.nanoTime();
             //Lal.l("lajs parsing commencing");
-            LaJSON lajs2 = new LaJSON(jsonarrayThing, false);
+            LassiJSON lajs2 = new LassiJSON(jsonarrayThing, false);
 
 
 
@@ -366,7 +366,7 @@ public class Main {
             System.out.println("");
 
 
-        Lal.l("LaJSON single thread  / LaJSON multi threaded  / jsonorg  / gson test check numbers:  "+qq+"/" + aa + "/" + oo + "/" + gg + " ::  content counter " + dobbi);
+        Lal.l("LassiJSON single thread  / LassiJSON multi threaded  / jsonorg  / gson test check numbers:  "+qq+"/" + aa + "/" + oo + "/" + gg + " ::  content counter " + dobbi);
 
 
     }
@@ -377,15 +377,15 @@ public class Main {
         Lal.l("starting test");
 
         // write your code here
-        LaJSON test1 = new LaJSON();
+        LassiJSON test1 = new LassiJSON();
         test1.putNumber("number1", 11);
         test1.putString("string", "test\n\r\tstring");
 
-        LaJSON test1inner = new LaJSON();
+        LassiJSON test1inner = new LassiJSON();
         test1inner.putNumber("exponent number", 1e7);
         test1inner.putString("string", "test\n\r\tstring");
 
-        LaJSON testArray = LaJSON.newArray();
+        LassiJSON testArray = LassiJSON.newArray();
 
         testArray.addNumber(100);
         testArray.addString("halo halo");
@@ -399,7 +399,7 @@ public class Main {
 
         String testInput1 = test1.toString();
 
-        LaJSON json = new LaJSON(testInput1);
+        LassiJSON json = new LassiJSON(testInput1);
 
         String str1 = testInput1;
         String str2 = json.toString();
@@ -421,7 +421,7 @@ public class Main {
 
 
 
-        LaJSON ns = new LaJSON();
+        LassiJSON ns = new LassiJSON();
 
 
         ns.putNumber("floaty  aaa", 1.3d);
@@ -430,21 +430,21 @@ public class Main {
         for (int n = 0; n < 5; n++) {
 
             for (int o = 0; o < 2; o++) {
-                LaJSON uus = new LaJSON();
+                LassiJSON uus = new LassiJSON();
                 uus.putNumber("sd\n\n\nardordooo" + o, o);
                 uus.putNumber("x", o);
                 uus.putNumber("nx", o + n);
                 //uus.putNumber("y",-o);
 
-                LaJSON arv = LaJSON.newArray();
+                LassiJSON arv = LassiJSON.newArray();
 
                 for (int b = 0; b < 10; b++) {
-                    LaJSON uv = new LaJSON();
+                    LassiJSON uv = new LassiJSON();
                     uv.putNumber("x", b + o);
                     uv.putNumber("y", b + o / 2);
                     uv.putString("hardy ", "sdfs\n\n");
 
-                    LaJSON subarray = LaJSON.newArray();
+                    LassiJSON subarray = LassiJSON.newArray();
 
                     uv.putLaJSON("sisainen array", subarray);
 
@@ -470,7 +470,7 @@ public class Main {
             ns.putNumber("floaty][}{" + n, 1.3);
         }
 
-        runTest(ns.toString(), "LaJSON generated big input file ", 100);
+        runTest(ns.toString(), "LassiJSON generated big input file ", 100);
 
        // if(true)
          //   return;
@@ -482,9 +482,9 @@ public class Main {
 
         runTest(test2String, "small json with no depth and two strings", 10000);
 
-        LaJSON strLj=new LaJSON(test2String);
+        LassiJSON strLj=new LassiJSON(test2String);
 
-        LaJSON test3 = new LaJSON();
+        LassiJSON test3 = new LassiJSON();
 
         for(int n=0; n<10000; n++)
         {
@@ -493,7 +493,7 @@ public class Main {
 
         runTest(test3.toString(),"10 000 small named subjsons straight on the root element", 50);
 
-        LaJSON test4 = new LaJSON();
+        LassiJSON test4 = new LassiJSON();
 
         for(int n=0; n<100000; n++)
         {
@@ -503,9 +503,9 @@ public class Main {
         runTest(test4.toString(),"100 000 small named subjsons straight on the root element", 10);
 
 
-        LaJSON test5 = new LaJSON();
+        LassiJSON test5 = new LassiJSON();
 
-        LaJSON array = new LaJSON();
+        LassiJSON array = new LassiJSON();
 
         array.clearAsArray();
 
@@ -526,7 +526,7 @@ public class Main {
         for(int n=0; n<10000; n++)
         {
 
-            LaJSON inner=new LaJSON();
+            LassiJSON inner=new LassiJSON();
                 for(int o=0; o<50; o++)
                 {
                     inner.putString("test_string "+o, "the strings content "+o);
@@ -542,7 +542,7 @@ public class Main {
         for(int n=0; n<20000; n++)
         {
 
-            LaJSON inner=new LaJSON();
+            LassiJSON inner=new LassiJSON();
             for(int o=0; o<50; o++)
             {
                 inner.putString("test_string "+o, "the strings content "+o);
@@ -555,7 +555,7 @@ public class Main {
         for(int n=0; n<100; n++)
         {
 
-            LaJSON inner=new LaJSON();
+            LassiJSON inner=new LassiJSON();
             for(int o=0; o<100; o++)
             {
                 inner.putString("test_string "+o, "the strings content "+o);

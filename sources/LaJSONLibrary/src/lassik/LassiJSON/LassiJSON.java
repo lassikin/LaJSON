@@ -1,4 +1,4 @@
-package lassik.LaJSON;
+package lassik.LassiJSON;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
@@ -8,7 +8,7 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ThreadFactory;
 
-public class LaJSON {
+public class LassiJSON {
     public static String LAJS_VERSION_STRING = "0.002";
     public static String COPYRIGHT = "Lassi Kinnunen 2019, released under wtfgpl, do as you please.";
 
@@ -197,7 +197,7 @@ public class LaJSON {
 
     public enum LaJSONDataType {STRING, NUMBER, BOOLEAN, ARRAY, JSONOBJECT, NULL, UNDEFINED};
 
-    public LaJSON() {
+    public LassiJSON() {
         clearAsObject();
     }
 
@@ -208,9 +208,9 @@ public class LaJSON {
     returns a clone that has no references to the original, with all data cloned.
      */
 
-    public LaJSON clone() {
+    public LassiJSON clone() {
         String str = toString();
-        LaJSON ret = new LaJSON(str, null, disableThreading);
+        LassiJSON ret = new LassiJSON(str, null, disableThreading);
         return ret;
     }
 /*
@@ -387,7 +387,7 @@ simply json escape a string. if there's no characters to escape then returns the
             for (String key : values.keySet()) {
                 addNewlineAndIndent(builder, indentation, addToIndentation);
 
-                LaJSON.Value val = values.get(key);
+                LassiJSON.Value val = values.get(key);
                 builder.append('"');
                 builder.append(jsonEscape(key));
                 builder.append('"');
@@ -434,7 +434,7 @@ simply json escape a string. if there's no characters to escape then returns the
     public class Value {
         public LaJSONDataType type = LaJSONDataType.UNDEFINED;
         private String iStr = null;
-        private LaJSON obj = null;
+        private LassiJSON obj = null;
         private BigDecimal nu = null;
 
         private void reset(){
@@ -478,7 +478,7 @@ simply json escape a string. if there's no characters to escape then returns the
             type = LaJSONDataType.STRING;
         }
 
-        public Value(LaJSON la) {
+        public Value(LassiJSON la) {
             obj = la;
             if (type != LaJSONDataType.JSONOBJECT) {
                 iStr = null;
@@ -524,7 +524,7 @@ simply json escape a string. if there's no characters to escape then returns the
                     wasImmediate = false;
                 if (startChar == '[')
                     type = LaJSONDataType.ARRAY;
-                obj = new LaJSON(content, tm, disableThreading);
+                obj = new LassiJSON(content, tm, disableThreading);
                 return;
             } else {
                 type = LaJSONDataType.NUMBER;
@@ -592,7 +592,7 @@ simply json escape a string. if there's no characters to escape then returns the
             return type == LaJSONDataType.NULL;
         }
 
-        public LaJSON getLaJSON() {
+        public LassiJSON getLaJSON() {
             return obj;
         }
 
@@ -620,7 +620,7 @@ simply json escape a string. if there's no characters to escape then returns the
             nu = new BigDecimal(content);
         }
 
-        public void setLaJSON(LaJSON content) {
+        public void setLaJSON(LassiJSON content) {
             obj = content;
             type = LaJSONDataType.JSONOBJECT;
         }
@@ -930,24 +930,24 @@ simply json escape a string. if there's no characters to escape then returns the
 
 
     //for practicalitys sake, the hashmap is accessible publicly
-    public HashMap<String, LaJSON.Value> values;
+    public HashMap<String, LassiJSON.Value> values;
 
 
-    public LaJSON(String inp) {
+    public LassiJSON(String inp) {
         constructor(inp, null, false);
     }
 
 
-    public LaJSON(String inp, boolean disableThreading) {
+    public LassiJSON(String inp, boolean disableThreading) {
         constructor(inp, null, disableThreading);
     }
 
-    public LaJSON(String inp, ThreadMaster tm) {
+    public LassiJSON(String inp, ThreadMaster tm) {
         constructor(inp, tm, false);
     }
 
 
-    public LaJSON(String inp, ThreadMaster tm, boolean disableThreading) {
+    public LassiJSON(String inp, ThreadMaster tm, boolean disableThreading) {
         constructor(inp, tm, disableThreading);
     }
 
@@ -1004,7 +1004,7 @@ simply json escape a string. if there's no characters to escape then returns the
         return val.getString();
     }
 
-    public LaJSON getLaJSON(String str) {
+    public LassiJSON getLaJSON(String str) {
         Value val = values.get(str);
         return val.obj;
     }
@@ -1075,7 +1075,7 @@ simply json escape a string. if there's no characters to escape then returns the
     }
 
 
-    public void putLaJSON(String name, LaJSON content) {
+    public void putLaJSON(String name, LassiJSON content) {
         Value val = values.get(name);
         if (val == null) {
             val = new Value();
@@ -1107,18 +1107,18 @@ simply json escape a string. if there's no characters to escape then returns the
      */
 
     /**
-     * creates an empty array LaJSON
+     * creates an empty array LassiJSON
      *
-     * @return LaJSON initialized as an empty array
+     * @return LassiJSON initialized as an empty array
      */
-    public static LaJSON newArray() {
-        LaJSON ret = new LaJSON();
+    public static LassiJSON newArray() {
+        LassiJSON ret = new LassiJSON();
         ret.clearAsArray();
         return ret;
     }
 
     /*
-    public LaJSON addArray(String str) {
+    public LassiJSON addArray(String str) {
         Value val = new Value();
         val.type = LaJSONDataType.ARRAY;
         val.obj = newArray();
@@ -1183,7 +1183,7 @@ simply json escape a string. if there's no characters to escape then returns the
         array.add(n, new Value(numb));
     }
 
-    public void addLaJSON(int n, LaJSON jso) {
+    public void addLaJSON(int n, LassiJSON jso) {
         array.add(n, new Value(jso));
     }
 
@@ -1207,7 +1207,7 @@ simply json escape a string. if there's no characters to escape then returns the
         array.add(new Value(numb));
     }
 
-    public void addLaJSON(LaJSON jso) {
+    public void addLaJSON(LassiJSON jso) {
         array.add(new Value(jso));
     }
 
