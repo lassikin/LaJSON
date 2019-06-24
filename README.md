@@ -28,5 +28,7 @@ With larger inputs, faster than either json or gson.
 
 # Installation / Requirements of the runtime system
 
-Add the .jar library into your project.
+Add the .jar library into your project. Alternatively you can simply just add the .java into your project(it's a single file, which is part of the project goals, 1 java file - WITH NO EXTRA DEPENDENCIES)
+
+
 Maven and Gradle packages coming in the future
